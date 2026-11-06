@@ -723,7 +723,7 @@ char **buffer_split(const ByteBuffer *buf, unsigned char delim, size_t *out_coun
     size_t new_capacity = array_capacity * 2;
     char **temp = (char **)realloc(tokens, new_capacity * sizeof(char *));
     }
-    
+     
      if (token_count == array_capacity)
         {
             size_t new_capacity = array_capacity * 2;
