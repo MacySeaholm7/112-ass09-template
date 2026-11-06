@@ -563,7 +563,7 @@ ByteBuffer *buffer_concat(const ByteBuffer *a, const ByteBuffer *b)
         return NULL;
     }
 
-    if (!buffer_append (result, a-> size, a -> data))
+    if (!buffer_append (result, a-> data, a -> size))
     {
         buffer_destroy (&result);
         return NULL;
