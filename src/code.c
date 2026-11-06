@@ -695,7 +695,7 @@ char **buffer_split(const ByteBuffer *buf, unsigned char delim, size_t *out_coun
 
     char **tokens = (char **) malloc (array_capacity * sizeof (char *));
 
-    if (tokens == 0)
+    if (tokens == NULL)    
     {
         return NULL;
     }
@@ -716,12 +716,6 @@ char **buffer_split(const ByteBuffer *buf, unsigned char delim, size_t *out_coun
     else
     {
         token_length = buf-> size - position;
-    }
-
-    if (token_count == array_capacity)
-    {
-    size_t new_capacity = array_capacity * 2;
-    char **temp = (char **)realloc(tokens, new_capacity * sizeof(char *));
     }
      
      if (token_count == array_capacity)
